@@ -24,10 +24,10 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run TASI Analyst Intelligence
-        run: python main.py
+      - name: Run TASI Analyst Intelligence Report
+        run: python run.py report
 
-      - name: Send Report via Email
+      - name: Send HTML Report via Email
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -35,8 +35,8 @@ jobs:
           secure: true
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: "TASI Analyst Intelligence Daily Report - ${{ github.run_id }}"
+          subject: "TASI Analyst Intelligence Report - ${{ github.run_id }}"
           to: zaheradelalawar@gmail.com
           from: "TASI Analyst Intelligence <${{ secrets.MAIL_USERNAME }}>"
-          body: "Attached is your automated daily TASI Analyst Intelligence report."
-          attachments: "*.xlsx"
+          body: "Attached is your automated daily TASI Analyst Intelligence consensus report."
+          attachments: "output/*.html"
