@@ -39,4 +39,4 @@ jobs:
           to: zaheradelalawar@gmail.com
           from: "TASI Analyst Intelligence <${{ secrets.MAIL_USERNAME }}>"
           body: "Attached is your automated daily TASI Analyst Intelligence consensus report."
-          attachments: "output/*.html"
+          attachments: "output/tasi_analyst_report_*.html"
