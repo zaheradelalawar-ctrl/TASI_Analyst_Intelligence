@@ -1,0 +1,711 @@
+ 
+============================================================ 
+Run started: Mon 11/09/2026 21:32:10.90 (python: py -3.12) 
+============================================================ 
+[1/3] Collecting Argaam recommendations... 
+
+=== argaam ===
+  GET https://www.argaam.com/en/tadawul/tasi/arqaam-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/morgan-stanley-saudi-arabia/researchers-opinions
+    -> parsed 2 rows
+  GET https://www.argaam.com/en/tadawul/tasi/jefferies/researchers-opinions
+    -> parsed 68 rows
+  GET https://www.argaam.com/en/tadawul/tasi/united-securities-company/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/goldman-sachs/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/hsbc/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/jpmorgan/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/citigroup/researchers-opinions
+    -> parsed 1 rows
+  GET https://www.argaam.com/en/tadawul/tasi/efg-hermes/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/alphamena/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/aljazira-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/al-rajhi-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/snb-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/riyad-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/anb-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/gib-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/bsf-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/alawwal-capital/researchers-opinions
+    -> parsed 34 rows
+  GET https://www.argaam.com/en/tadawul/tasi/u-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/ci-capital/researchers-opinions
+    -> parsed 71 rows
+  total rows parsed: 1676
+  fetched raw items: 1676
+  ingest stats: {'seen': 1676, 'inserted': 0, 'duplicate': 1625, 'promoted': 0, 'rejected': 51, 'review': 0}
+
+TOTAL: {'seen': 1676, 'inserted': 0, 'duplicate': 1625, 'promoted': 0, 'rejected': 51, 'review': 0}
+Argaam exit: 0 
+[2/3] Collecting price history... 
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: TASI.SR"}}}
+$TASI.SR: possibly delisted; no price data found  (period=1200d) (Yahoo error = "No data found, symbol may be delisted")
+$1090.SR: possibly delisted; no price data found  (period=400d) (Yahoo error = "No data found, symbol may be delisted")
+
+=== prices ===
+  fetching benchmark (trying 3 tickers)
+    trying ^TASI.SR (Tadawul All Share Index (Yahoo))
+    ^TASI.SR: only 1 days, trying next
+    trying TASI.SR (Tadawul (alternate Yahoo symbol))
+    TASI.SR: only 0 days, trying next
+    trying KSA (iShares MSCI Saudi Arabia ETF (US proxy))
+    got 1200 days from KSA
+    1200 index days written from KSA
+  fetching prices for 142 tickers
+    1010: 400 days, 1 split(s)
+    1020: 400 days, 1 split(s)
+    1030: 400 days, 1 split(s)
+    1050: 400 days
+    1060: 400 days
+    1080: 400 days
+    1090: NO DATA
+    1111: 400 days
+    1120: 400 days, 1 split(s)
+    1140: 400 days, 1 split(s)
+    1150: 400 days, 1 split(s)
+    1180: 400 days
+    1201: 400 days
+    1202: 400 days
+    1211: 400 days
+    1212: 400 days
+    1214: 400 days, 1 split(s)
+    1303: 400 days
+    1320: 400 days
+    1321: 400 days
+    1322: 400 days
+    1810: 400 days
+    1820: 400 days
+    1830: 400 days
+    1831: 400 days, 1 split(s)
+    1833: 400 days, 1 split(s)
+    1834: 400 days
+    1835: 400 days
+    2001: 400 days, 1 rejected
+    2010: 400 days
+    2020: 400 days
+    2040: 400 days
+    2050: 400 days
+    2060: 400 days
+    2080: 400 days
+    2081: 400 days
+    2082: 400 days
+    2083: 400 days
+    2084: 400 days
+    2170: 400 days
+    2190: 400 days
+    2222: 400 days
+    2223: 400 days
+    2250: 400 days, 1 split(s)
+    2270: 400 days
+    2280: 400 days
+    2281: 400 days
+    2283: 400 days
+    2284: 400 days
+    2285: 400 days
+    2286: 400 days
+    2290: 400 days
+    2300: 400 days
+    2310: 400 days
+    2320: 400 days
+    2330: 400 days
+    2350: 400 days
+    2380: 400 days
+    2381: 400 days
+    2382: 400 days, 1 split(s)
+    3002: 400 days
+    3003: 400 days
+    3004: 400 days
+    3010: 400 days
+    3020: 400 days
+    3030: 400 days
+    3050: 400 days
+    3090: 400 days
+    3091: 400 days
+    3092: 400 days
+    4001: 400 days
+    4002: 400 days
+    4003: 400 days
+    4004: 400 days, 1 split(s)
+    4005: 400 days
+    4007: 400 days
+    4008: 400 days
+    4009: 400 days
+    4013: 400 days
+    4015: 400 days
+    4017: 400 days
+    4018: 400 days
+    4020: 400 days
+    4030: 400 days, 1 split(s)
+    4031: 400 days
+    4050: 400 days
+    4071: 400 days
+    4072: 400 days
+    4081: 400 days
+    4084: 400 days
+    4090: 400 days, 1 split(s)
+    4142: 400 days
+    4150: 400 days
+    4161: 400 days
+    4162: 400 days
+    4163: 400 days
+    4164: 400 days
+    4165: 400 days
+    4190: 400 days
+    4193: 400 days
+    4200: 400 days
+    4210: 400 days
+    4260: 400 days, 1 split(s)
+    4261: 400 days, 1 split(s)
+    4262: 400 days
+    4263: 400 days
+    4264: 351 days
+    4265: 234 days
+    4280: 400 days
+    4291: 400 days
+    4292: 400 days
+    4321: 400 days, 1 split(s)
+    4322: 400 days
+    4333: 400 days
+    4340: 400 days
+    5110: 400 days
+    6001: 400 days
+    6002: 400 days
+    6004: 400 days
+    6010: 400 days
+    6014: 400 days
+    6015: 400 days
+    6017: 400 days
+    6018: 327 days
+    6019: 233 days
+    6022: 337 days
+    7010: 400 days
+    7020: 400 days
+    7030: 400 days
+    7200: 400 days
+    7202: 400 days, 1 split(s)
+    7203: 400 days
+    7204: 400 days
+    7211: 400 days
+    8010: 400 days, 1 split(s)
+    8012: 400 days
+    8030: 400 days
+    8060: 400 days
+    8200: 400 days, 1 split(s)
+    8210: 400 days
+    8250: 400 days
+    8313: 400 days
+  done: {'index_days': 1200, 'index_source': 'KSA', 'tickers': 141, 'price_days': 55882, 'splits_kept': 20, 'splits_rejected': 1, 'manual_splits': 0, 'failed': 1}
+
+TOTAL: {'seen': 0, 'inserted': 0, 'duplicate': 0, 'promoted': 0, 'rejected': 0, 'review': 0}
+Prices exit: 0 
+[3/3] Running monitor... 
+Monitor baseline: 2026-11-09 21:27:31
+Watching 3 stock(s)
+  2320: 2 event(s)
+
+Monitor summary: 3 stocks, 2 event(s)
+  Alerts (unnotified): {'high': 0, 'medium': 2, 'low': 0}
+
+=== Delivering 2 alert(s) ===
+
+Traceback (most recent call last):
+  File "F:\TASI_Analyst_Intelligence\run.py", line 427, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "F:\TASI_Analyst_Intelligence\run.py", line 419, in main
+    return cmd_monitor(cfg, dry_run=args.dry_run)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\TASI_Analyst_Intelligence\run.py", line 329, in cmd_monitor
+    dispatch(
+  File "F:\TASI_Analyst_Intelligence\tasi_agent\notifier.py", line 44, in dispatch
+    print(banner)
+  File "C:\Users\zalawar\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f7e1' in position 74: character maps to <undefined>
+Monitor exit: 1 
+ 
+Run finished: Mon 11/09/2026 21:34:36.87 
+Exit codes -- argaam=0 prices=0 monitor=1 
+ 
+============================================================ 
+Run started: Mon 11/09/2026 21:41:39.46 (python: py -3.12) 
+============================================================ 
+[1/3] Collecting Argaam recommendations... 
+
+=== argaam ===
+  GET https://www.argaam.com/en/tadawul/tasi/arqaam-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/morgan-stanley-saudi-arabia/researchers-opinions
+    -> parsed 2 rows
+  GET https://www.argaam.com/en/tadawul/tasi/jefferies/researchers-opinions
+    -> parsed 68 rows
+  GET https://www.argaam.com/en/tadawul/tasi/united-securities-company/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/goldman-sachs/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/hsbc/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/jpmorgan/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/citigroup/researchers-opinions
+    -> parsed 1 rows
+  GET https://www.argaam.com/en/tadawul/tasi/efg-hermes/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/alphamena/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/aljazira-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/al-rajhi-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/snb-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/riyad-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/anb-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/gib-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/bsf-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/alawwal-capital/researchers-opinions
+    -> parsed 34 rows
+  GET https://www.argaam.com/en/tadawul/tasi/u-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/ci-capital/researchers-opinions
+    -> parsed 71 rows
+  total rows parsed: 1676
+  fetched raw items: 1676
+  ingest stats: {'seen': 1676, 'inserted': 0, 'duplicate': 1625, 'promoted': 0, 'rejected': 51, 'review': 0}
+
+TOTAL: {'seen': 1676, 'inserted': 0, 'duplicate': 1625, 'promoted': 0, 'rejected': 51, 'review': 0}
+Argaam exit: 0 
+[2/3] Collecting price history... 
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: TASI.SR"}}}
+$TASI.SR: possibly delisted; no price data found  (period=1200d) (Yahoo error = "No data found, symbol may be delisted")
+$1090.SR: possibly delisted; no price data found  (period=400d) (Yahoo error = "No data found, symbol may be delisted")
+
+=== prices ===
+  fetching benchmark (trying 3 tickers)
+    trying ^TASI.SR (Tadawul All Share Index (Yahoo))
+    ^TASI.SR: only 1 days, trying next
+    trying TASI.SR (Tadawul (alternate Yahoo symbol))
+    TASI.SR: only 0 days, trying next
+    trying KSA (iShares MSCI Saudi Arabia ETF (US proxy))
+    got 1200 days from KSA
+    1200 index days written from KSA
+  fetching prices for 142 tickers
+    1010: 400 days, 1 split(s)
+    1020: 400 days, 1 split(s)
+    1030: 400 days, 1 split(s)
+    1050: 400 days
+    1060: 400 days
+    1080: 400 days
+    1090: NO DATA
+    1111: 400 days
+    1120: 400 days, 1 split(s)
+    1140: 400 days, 1 split(s)
+    1150: 400 days, 1 split(s)
+    1180: 400 days
+    1201: 400 days
+    1202: 400 days
+    1211: 400 days
+    1212: 400 days
+    1214: 400 days, 1 split(s)
+    1303: 400 days
+    1320: 400 days
+    1321: 400 days
+    1322: 400 days
+    1810: 400 days
+    1820: 400 days
+    1830: 400 days
+    1831: 400 days, 1 split(s)
+    1833: 400 days, 1 split(s)
+    1834: 400 days
+    1835: 400 days
+    2001: 400 days, 1 rejected
+    2010: 400 days
+    2020: 400 days
+    2040: 400 days
+    2050: 400 days
+    2060: 400 days
+    2080: 400 days
+    2081: 400 days
+    2082: 400 days
+    2083: 400 days
+    2084: 400 days
+    2170: 400 days
+    2190: 400 days
+    2222: 400 days
+    2223: 400 days
+    2250: 400 days, 1 split(s)
+    2270: 400 days
+    2280: 400 days
+    2281: 400 days
+    2283: 400 days
+    2284: 400 days
+    2285: 400 days
+    2286: 400 days
+    2290: 400 days
+    2300: 400 days
+    2310: 400 days
+    2320: 400 days
+    2330: 400 days
+    2350: 400 days
+    2380: 400 days
+    2381: 400 days
+    2382: 400 days, 1 split(s)
+    3002: 400 days
+    3003: 400 days
+    3004: 400 days
+    3010: 400 days
+    3020: 400 days
+    3030: 400 days
+    3050: 400 days
+    3090: 400 days
+    3091: 400 days
+    3092: 400 days
+    4001: 400 days
+    4002: 400 days
+    4003: 400 days
+    4004: 400 days, 1 split(s)
+    4005: 400 days
+    4007: 400 days
+    4008: 400 days
+    4009: 400 days
+    4013: 400 days
+    4015: 400 days
+    4017: 400 days
+    4018: 400 days
+    4020: 400 days
+    4030: 400 days, 1 split(s)
+    4031: 400 days
+    4050: 400 days
+    4071: 400 days
+    4072: 400 days
+    4081: 400 days
+    4084: 400 days
+    4090: 400 days, 1 split(s)
+    4142: 400 days
+    4150: 400 days
+    4161: 400 days
+    4162: 400 days
+    4163: 400 days
+    4164: 400 days
+    4165: 400 days
+    4190: 400 days
+    4193: 400 days
+    4200: 400 days
+    4210: 400 days
+    4260: 400 days, 1 split(s)
+    4261: 400 days, 1 split(s)
+    4262: 400 days
+    4263: 400 days
+    4264: 351 days
+    4265: 234 days
+    4280: 400 days
+    4291: 400 days
+    4292: 400 days
+    4321: 400 days, 1 split(s)
+    4322: 400 days
+    4333: 400 days
+    4340: 400 days
+    5110: 400 days
+    6001: 400 days
+    6002: 400 days
+    6004: 400 days
+    6010: 400 days
+    6014: 400 days
+    6015: 400 days
+    6017: 400 days
+    6018: 327 days
+    6019: 233 days
+    6022: 337 days
+    7010: 400 days
+    7020: 400 days
+    7030: 400 days
+    7200: 400 days
+    7202: 400 days, 1 split(s)
+    7203: 400 days
+    7204: 400 days
+    7211: 400 days
+    8010: 400 days, 1 split(s)
+    8012: 400 days
+    8030: 400 days
+    8060: 400 days
+    8200: 400 days, 1 split(s)
+    8210: 400 days
+    8250: 400 days
+    8313: 400 days
+  done: {'index_days': 1200, 'index_source': 'KSA', 'tickers': 141, 'price_days': 55882, 'splits_kept': 20, 'splits_rejected': 1, 'manual_splits': 0, 'failed': 1}
+
+TOTAL: {'seen': 0, 'inserted': 0, 'duplicate': 0, 'promoted': 0, 'rejected': 0, 'review': 0}
+Prices exit: 0 
+[3/3] Running monitor... 
+Monitor baseline: 2026-11-09 21:41:16
+Watching 3 stock(s)
+  2320: 2 event(s)
+
+Monitor summary: 3 stocks, 2 new event(s)
+  Pending alerts: {'high': 0, 'medium': 2, 'low': 0}
+
+=== Delivering 2 alert(s) ===
+
+========================================================================
+[MED ]  2320 — Consensus: Single opinion → Confirmed (2+ firms)
+========================================================================
+2320 consensus moved from 'Single opinion' to 'Confirmed (2+ firms)'. Counts: before 1P/0N/0X → after 2P/0N/0X.
+========================================================================
+
+========================================================================
+[MED ]  2320 — Price surged +9.9% vs 5-day average
+========================================================================
+2320 closed at SAR 52.00 on 2026-11-09 versus 5-day average of SAR 47.32 (+9.9%).
+========================================================================
+
+[notifier] delivered 2/2 alert(s) -> logs\alerts_2026-11-09.log
+
+Delivered 2 of 2
+Monitor exit: 0 
+ 
+Run finished: Mon 11/09/2026 21:44:13.34 
+Exit codes -- argaam=0 prices=0 monitor=0 
+ 
+============================================================ 
+Run started: Mon 11/09/2026 21:50:03.81 (python: py -3.12) 
+============================================================ 
+[1/3] Collecting Argaam recommendations... 
+
+=== argaam ===
+  GET https://www.argaam.com/en/tadawul/tasi/arqaam-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/morgan-stanley-saudi-arabia/researchers-opinions
+    -> parsed 2 rows
+  GET https://www.argaam.com/en/tadawul/tasi/jefferies/researchers-opinions
+    -> parsed 68 rows
+  GET https://www.argaam.com/en/tadawul/tasi/united-securities-company/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/goldman-sachs/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/hsbc/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/jpmorgan/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/citigroup/researchers-opinions
+    -> parsed 1 rows
+  GET https://www.argaam.com/en/tadawul/tasi/efg-hermes/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/alphamena/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/aljazira-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/al-rajhi-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/snb-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/riyad-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/anb-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/gib-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/bsf-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/alawwal-capital/researchers-opinions
+    -> parsed 34 rows
+  GET https://www.argaam.com/en/tadawul/tasi/u-capital/researchers-opinions
+    -> parsed 100 rows
+  GET https://www.argaam.com/en/tadawul/tasi/ci-capital/researchers-opinions
+    -> parsed 71 rows
+  total rows parsed: 1676
+  fetched raw items: 1676
+  ingest stats: {'seen': 1676, 'inserted': 0, 'duplicate': 1625, 'promoted': 0, 'rejected': 51, 'review': 0}
+
+TOTAL: {'seen': 1676, 'inserted': 0, 'duplicate': 1625, 'promoted': 0, 'rejected': 51, 'review': 0}
+Argaam exit: 0 
+[2/3] Collecting price history... 
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: TASI.SR"}}}
+$TASI.SR: possibly delisted; no price data found  (period=1200d) (Yahoo error = "No data found, symbol may be delisted")
+$1090.SR: possibly delisted; no price data found  (period=400d) (Yahoo error = "No data found, symbol may be delisted")
+
+=== prices ===
+  fetching benchmark (trying 3 tickers)
+    trying ^TASI.SR (Tadawul All Share Index (Yahoo))
+    ^TASI.SR: only 1 days, trying next
+    trying TASI.SR (Tadawul (alternate Yahoo symbol))
+    TASI.SR: only 0 days, trying next
+    trying KSA (iShares MSCI Saudi Arabia ETF (US proxy))
+    got 1200 days from KSA
+    1200 index days written from KSA
+  fetching prices for 142 tickers
+    1010: 400 days, 1 split(s)
+    1020: 400 days, 1 split(s)
+    1030: 400 days, 1 split(s)
+    1050: 400 days
+    1060: 400 days
+    1080: 400 days
+    1090: NO DATA
+    1111: 400 days
+    1120: 400 days, 1 split(s)
+    1140: 400 days, 1 split(s)
+    1150: 400 days, 1 split(s)
+    1180: 400 days
+    1201: 400 days
+    1202: 400 days
+    1211: 400 days
+    1212: 400 days
+    1214: 400 days, 1 split(s)
+    1303: 400 days
+    1320: 400 days
+    1321: 400 days
+    1322: 400 days
+    1810: 400 days
+    1820: 400 days
+    1830: 400 days
+    1831: 400 days, 1 split(s)
+    1833: 400 days, 1 split(s)
+    1834: 400 days
+    1835: 400 days
+    2001: 400 days, 1 rejected
+    2010: 400 days
+    2020: 400 days
+    2040: 400 days
+    2050: 400 days
+    2060: 400 days
+    2080: 400 days
+    2081: 400 days
+    2082: 400 days
+    2083: 400 days
+    2084: 400 days
+    2170: 400 days
+    2190: 400 days
+    2222: 400 days
+    2223: 400 days
+    2250: 400 days, 1 split(s)
+    2270: 400 days
+    2280: 400 days
+    2281: 400 days
+    2283: 400 days
+    2284: 400 days
+    2285: 400 days
+    2286: 400 days
+    2290: 400 days
+    2300: 400 days
+    2310: 400 days
+    2320: 400 days
+    2330: 400 days
+    2350: 400 days
+    2380: 400 days
+    2381: 400 days
+    2382: 400 days, 1 split(s)
+    3002: 400 days
+    3003: 400 days
+    3004: 400 days
+    3010: 400 days
+    3020: 400 days
+    3030: 400 days
+    3050: 400 days
+    3090: 400 days
+    3091: 400 days
+    3092: 400 days
+    4001: 400 days
+    4002: 400 days
+    4003: 400 days
+    4004: 400 days, 1 split(s)
+    4005: 400 days
+    4007: 400 days
+    4008: 400 days
+    4009: 400 days
+    4013: 400 days
+    4015: 400 days
+    4017: 400 days
+    4018: 400 days
+    4020: 400 days
+    4030: 400 days, 1 split(s)
+    4031: 400 days
+    4050: 400 days
+    4071: 400 days
+    4072: 400 days
+    4081: 400 days
+    4084: 400 days
+    4090: 400 days, 1 split(s)
+    4142: 400 days
+    4150: 400 days
+    4161: 400 days
+    4162: 400 days
+    4163: 400 days
+    4164: 400 days
+    4165: 400 days
+    4190: 400 days
+    4193: 400 days
+    4200: 400 days
+    4210: 400 days
+    4260: 400 days, 1 split(s)
+    4261: 400 days, 1 split(s)
+    4262: 400 days
+    4263: 400 days
+    4264: 351 days
+    4265: 234 days
+    4280: 400 days
+    4291: 400 days
+    4292: 400 days
+    4321: 400 days, 1 split(s)
+    4322: 400 days
+    4333: 400 days
+    4340: 400 days
+    5110: 400 days
+    6001: 400 days
+    6002: 400 days
+    6004: 400 days
+    6010: 400 days
+    6014: 400 days
+    6015: 400 days
+    6017: 400 days
+    6018: 327 days
+    6019: 233 days
+    6022: 337 days
+    7010: 400 days
+    7020: 400 days
+    7030: 400 days
+    7200: 400 days
+    7202: 400 days, 1 split(s)
+    7203: 400 days
+    7204: 400 days
+    7211: 400 days
+    8010: 400 days, 1 split(s)
+    8012: 400 days
+    8030: 400 days
+    8060: 400 days
+    8200: 400 days, 1 split(s)
+    8210: 400 days
+    8250: 400 days
+    8313: 400 days
+  done: {'index_days': 1200, 'index_source': 'KSA', 'tickers': 141, 'price_days': 55882, 'splits_kept': 20, 'splits_rejected': 1, 'manual_splits': 0, 'failed': 1}
+
+TOTAL: {'seen': 0, 'inserted': 0, 'duplicate': 0, 'promoted': 0, 'rejected': 0, 'review': 0}
+Prices exit: 0 
+[3/3] Running monitor... 
+Monitor baseline: 2026-11-02 21:52:25
+Watching 3 stock(s)
+
+Monitor summary: 3 stocks, 0 new event(s)
+  Pending alerts: {'high': 0, 'medium': 0, 'low': 0}
+  (No pending alerts — staying quiet.)
+Monitor exit: 0 
+ 
+Run finished: Mon 11/09/2026 21:52:25.91 
+Exit codes -- argaam=0 prices=0 monitor=0 

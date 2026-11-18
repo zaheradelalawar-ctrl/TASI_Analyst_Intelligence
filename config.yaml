@@ -1,0 +1,65 @@
+# =============================================================================
+# TASI Analyst Consensus Intelligence Agent - configuration
+# =============================================================================
+# Every key below is merged on top of hard-coded defaults in
+# tasi_agent/config.py, so you only need to include what you want to override.
+# =============================================================================
+
+project:
+  name: "TASI Analyst Consensus Intelligence Agent"
+  timezone: "Asia/Riyadh"
+  freshness_days: 90          # recommendations older than this cannot vote
+  data_dir: "data"
+  output_dir: "output"
+  db_path: "data/tasi_analyst.db"
+
+consensus:
+  confirm_threshold: 2
+  strong_threshold: 4         # ← was 3, now 4 per Reading 3 policy
+  require_verified_only: true
+  allowed_statuses: ["verified", "partial"]
+
+extraction:
+  backend: "none"             # ollama | none  (none = no LLM, deterministic only)
+  ollama_url: "http://localhost:11434"
+  ollama_model: "llama3.1:8b"
+  min_confidence: 0.55
+
+collectors:
+
+  # -- Argaam researchers-opinions pages (Playwright, no API key needed) -----
+  argaam:
+    enabled: true
+    base_url: "https://www.argaam.com/en/tadawul/tasi"
+    request_delay_seconds: 2.0
+    wait_for_rows_timeout_ms: 15000     # max wait for the SPA table to render
+    page_load_timeout_ms: 30000
+
+  # -- Euroland IR analyst-coverage pages (Playwright) -----------------------
+  euroland:
+    enabled: true
+    base_url: "http://ksatools.eurolandir.com/tools/ee/"
+    request_delay_seconds: 1.5
+    page_load_timeout_ms: 30000
+    tab_wait_timeout_ms: 10000
+
+  # -- AlJazira Capital research listing (plain requests) --------------------
+  aljazira:
+    enabled: false
+    url: "https://aljaziracapital.com.sa/en/insights/research-reports/"
+    request_delay_seconds: 3.0
+
+  # -- PDF inbox: drop report PDFs here, they get parsed ---------------------
+  pdf_inbox:
+    enabled: true
+    inbox: "data/inbox"
+
+reporting:
+  formats: ["html", "md", "xlsx"]
+  auto_open: ["xlsx"]            # formats to open when report finishes; [] = none
+  activity_window_days: 1
+  top_n_other: 40
+
+performance:
+  horizons: [20, 60, 120]
+  min_sample_for_publication: 5

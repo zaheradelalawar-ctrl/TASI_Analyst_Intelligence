@@ -1,0 +1,3 @@
+{
+  "_comment": "Manual split overrides. Format: {ticker: [{ex_date, ratio, note}]}. ratio = forward-split factor. Merged into the splits table on every `collect --source prices` run. EMPTY by default — the previous 4262 entry was based on a mislabel and has been removed. Add entries only after confirming against https://www.saudiexchange.sa/ corporate actions."
+}

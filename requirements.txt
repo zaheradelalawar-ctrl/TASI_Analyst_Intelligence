@@ -1,0 +1,22 @@
+# --- Core runtime ---------------------------------------------------------
+pyyaml>=6.0,<7
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
+lxml>=5.0,<6
+
+# --- Data & reports -------------------------------------------------------
+pandas>=2.0,<3
+openpyxl>=3.1,<4
+
+# --- Dashboard ------------------------------------------------------------
+streamlit>=1.30,<2
+
+# --- Optional: PDF research extraction ------------------------------------
+pymupdf>=1.23,<2
+
+# --- Required for Argaam + Euroland SPA scraping --------------------------
+# After install run: py -3.12 -m playwright install chromium
+playwright>=1.40,<2
+
+# --- Yahoo Finance price history (handles cookies/crumbs automatically) ---
+yfinance>=0.2.40,<1
